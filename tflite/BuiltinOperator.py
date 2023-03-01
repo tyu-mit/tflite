@@ -160,3 +160,6 @@ class BuiltinOperator(object):
     UNSORTED_SEGMENT_MAX = 154
     UNSORTED_SEGMENT_SUM = 155
     ATAN2 = 156
+    UNSORTED_SEGMENT_MIN = 157
+    SIGN = 158
+

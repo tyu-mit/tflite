@@ -3,26 +3,16 @@
 # namespace: tflite
 
 import flatbuffers
-from flatbuffers.compat import import_numpy
-np = import_numpy()
 
 class SkipGramOptions(object):
     __slots__ = ['_tab']
 
     @classmethod
-    def GetRootAs(cls, buf, offset=0):
+    def GetRootAsSkipGramOptions(cls, buf, offset):
         n = flatbuffers.encode.Get(flatbuffers.packer.uoffset, buf, offset)
         x = SkipGramOptions()
         x.Init(buf, n + offset)
         return x
-
-    @classmethod
-    def GetRootAsSkipGramOptions(cls, buf, offset=0):
-        """This method is deprecated. Please switch to GetRootAs."""
-        return cls.GetRootAs(buf, offset)
-    @classmethod
-    def SkipGramOptionsBufferHasIdentifier(cls, buf, offset, size_prefixed=False):
-        return flatbuffers.util.BufferHasIdentifier(buf, offset, b"\x54\x46\x4C\x33", size_prefixed=size_prefixed)
 
     # SkipGramOptions
     def Init(self, buf, pos):
@@ -50,17 +40,7 @@ class SkipGramOptions(object):
         return False
 
 def SkipGramOptionsStart(builder): builder.StartObject(3)
-def Start(builder):
-    return SkipGramOptionsStart(builder)
 def SkipGramOptionsAddNgramSize(builder, ngramSize): builder.PrependInt32Slot(0, ngramSize, 0)
-def AddNgramSize(builder, ngramSize):
-    return SkipGramOptionsAddNgramSize(builder, ngramSize)
 def SkipGramOptionsAddMaxSkipSize(builder, maxSkipSize): builder.PrependInt32Slot(1, maxSkipSize, 0)
-def AddMaxSkipSize(builder, maxSkipSize):
-    return SkipGramOptionsAddMaxSkipSize(builder, maxSkipSize)
 def SkipGramOptionsAddIncludeAllNgrams(builder, includeAllNgrams): builder.PrependBoolSlot(2, includeAllNgrams, 0)
-def AddIncludeAllNgrams(builder, includeAllNgrams):
-    return SkipGramOptionsAddIncludeAllNgrams(builder, includeAllNgrams)
 def SkipGramOptionsEnd(builder): return builder.EndObject()
-def End(builder):
-    return SkipGramOptionsEnd(builder)

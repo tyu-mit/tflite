@@ -4,19 +4,19 @@
 
 import flatbuffers
 
-class NegOptions(object):
+class SignOptions(object):
     __slots__ = ['_tab']
 
     @classmethod
-    def GetRootAsNegOptions(cls, buf, offset):
+    def GetRootAsSignOptions(cls, buf, offset):
         n = flatbuffers.encode.Get(flatbuffers.packer.uoffset, buf, offset)
-        x = NegOptions()
+        x = SignOptions()
         x.Init(buf, n + offset)
         return x
 
-    # NegOptions
+    # SignOptions
     def Init(self, buf, pos):
         self._tab = flatbuffers.table.Table(buf, pos)
 
-def NegOptionsStart(builder): builder.StartObject(0)
-def NegOptionsEnd(builder): return builder.EndObject()
+def SignOptionsStart(builder): builder.StartObject(0)
+def SignOptionsEnd(builder): return builder.EndObject()

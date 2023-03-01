@@ -123,5 +123,8 @@ class BuiltinOptions(object):
     DynamicUpdateSliceOptions = 117
     UnsortedSegmentProdOptions = 118
     UnsortedSegmentMaxOptions = 119
-    UnsortedSegmentSumOptions = 120
-    ATan2Options = 121
+    UnsortedSegmentMinOptions = 120
+    UnsortedSegmentSumOptions = 121
+    ATan2Options = 122
+    SignOptions = 123
+
