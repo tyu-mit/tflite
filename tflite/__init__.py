@@ -1,6 +1,6 @@
 # import classes and functions of submodules
 
-__version__ = '2.10.0'
+__version__ = '2.11.0'
 
 
 
